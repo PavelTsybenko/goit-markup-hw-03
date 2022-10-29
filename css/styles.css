@@ -16,10 +16,13 @@
 *p,
 h1,
 h2,
-h3 {
+h3,
+ul {
   width: 0;
   padding: 0;
+  margin: 0;
 }
+
 .page-body {
   padding-top: 24px 0px 60px 0px;
   color: var(--primery-text-color);
@@ -41,25 +44,20 @@ h3 {
 .item.list {
   display: flex;
   justify-content: space-between;
-
-  /* flex-basis: calc((100%-30px) / 2);
-  margin-left: 30px; */
 }
 
 .img-worker {
   text-align: center;
 
   width: 270px;
-  height: 360px;
+  height: 370px;
   background-color: #ffffff;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.img {
-  /* border-bottom: ; */
-}
+
 .list {
   list-style: none;
 }
@@ -118,14 +116,17 @@ ul {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  margin-left: 294px;
+  margin-right: 50px;
 }
 .link-connection .link:hover,
 .link-connection .link:focus {
   color: var(--accent-color);
 }
 .site-nav .link {
-  margin-right: 52px;
+  margin-right: 50px;
 }
+
 .link-phone {
   color: var(--secondary-text-color);
   text-decoration: none;
@@ -230,6 +231,7 @@ ul {
   line-height: 36px;
   /* identical to box height, or 200% */
   letter-spacing: 0.06em;
+  margin: 30px 0 0 0;
 }
 .subtitle {
   font-weight: 400;
@@ -239,6 +241,7 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+  margin: 10px 0;
 }
 /*footer*/
 .address {
@@ -256,9 +259,12 @@ ul {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  /* or 171% */
+
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+.subject .list {
+  outline: 3px solid red;
 }
 .button {
   color: var(--third-text-color);
@@ -328,20 +334,44 @@ ul {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
-  /* identical to box height */
+  margin-top: 60px;
+
   letter-spacing: 0.03em;
   color: var(--third-text-color);
 }
 .footer {
   background: var(--background-color);
 }
-.subject .link {
+.subject-list {
+  color: var(--primery-text-color);
   text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--third-text-color);
+}
+.subject-list .link {
+  text-decoration: none;
+  font-style: normal;
+  margin: 15px 0;
+  color: var(--third-text-color);
+}
+.link-tel {
+  color: var(--primery-text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--third-text-color);
+  margin-bottom: 60px;
 }
 .subject .link:hover,
 .subject .link:focus {
   color: var(--accent-color);
 }
+
 .link.address {
   color: var(--third-text-color);
 }
