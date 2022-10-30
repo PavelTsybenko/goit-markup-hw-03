@@ -12,15 +12,21 @@
   --secondary-text-color: #757575;
   --third-text-color: #ffffff;
   --background-color: #2f303a;
+  --portfolio-bg-color: rgba(255, 255, 255, 1);
 }
 *p,
 h1,
 h2,
 h3,
-ul {
+ul,
+li {
   width: 0;
   padding: 0;
   margin: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
 }
 
 .page-body {
@@ -40,6 +46,7 @@ ul {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  color: rgba(236, 236, 236, 1);
 }
 .item.list {
   display: flex;
@@ -51,13 +58,25 @@ ul {
 
   width: 270px;
   height: 370px;
-  background-color: #ffffff;
+  background-color: var(--third-text-color);
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+.img-cases {
+  width: 370px;
+  height: 404px;
+  background-color: var(--third-text-color);
 
+  border: 1px rgba(238, 238, 238, 1);
+}
+.img-cases > a {
+  display: inline-block;
+}
+.title {
+  padding: 20px 24px;
+}
 .list {
   list-style: none;
 }
@@ -82,9 +101,9 @@ ul {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
-  /* identical to box height */
+
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--primery-text-color);
   margin-right: 93px;
 }
 
@@ -141,6 +160,10 @@ ul {
 .hero {
   background: var(--background-color);
   padding: 195px 0px;
+}
+.hero-portfolio {
+  background: var(--portfolio-bg-color);
+  border-top: 1px solid rgba(236, 236, 236, 1);
 }
 .hero-title {
   font-style: normal;
@@ -221,23 +244,23 @@ ul {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-  /* or 171% */
+
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
 .caption {
   font-weight: 700;
   font-size: 18px;
-  line-height: 36px;
-  /* identical to box height, or 200% */
+  line-height: 2;
+
   letter-spacing: 0.06em;
-  margin: 30px 0 0 0;
+  margin: 0;
 }
 .subtitle {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
-  /* identical to box height */
+
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
@@ -248,8 +271,8 @@ ul {
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
-  line-height: 24px;
-  /* or 171% */
+  line-height: 1.71;
+
   letter-spacing: 0.03em;
   color: var(--third-text-color);
   text-decoration: none;
@@ -258,14 +281,12 @@ ul {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.71;
 
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-.subject .list {
-  outline: 3px solid red;
-}
+
 .button {
   color: var(--third-text-color);
   background-color: var(--accent-color);
@@ -274,8 +295,8 @@ ul {
   line-height: 1.87;
   margin: 45px auto;
   border-radius: 4px;
-  width: 216px;
-  height: 60px;
+
+  padding: 10px 32px;
   text-align: center;
   justify-content: center;
 
@@ -292,7 +313,7 @@ ul {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  /* identical to box height, or 162% */
+
   text-align: center;
   letter-spacing: 0.03em;
   font-family: inherit;
@@ -303,27 +324,48 @@ ul {
   background: var(--accent-color);
 }
 /*main-portfolio*/
+.button-nav.list {
+  display: flex;
+  justify-content: center;
+}
+
+.button-nav.list > li {
+  margin: 94px 8px 50px 0;
+}
+.list {
+  box-sizing: border-box;
+}
 .caption {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
-  /* identical to box height, or 200% */
+
   letter-spacing: 0.06em;
   color: var(--primery-text-color);
+}
+.content.list > li {
+  border: 1px solid rgba(238, 238, 238, 1);
 }
 .content .list > text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.8;
-  /* identical to box height, or 188% */
-  color: #757575;
+
+  color: var(--secondary-text-color);
   letter-spacing: 0.03em;
+}
+.content.list {
+  justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 30px;
+  flex-basis: calc((100% - 30px) / 3);
 }
 .text.headline {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
-  /* identical to box height, or 188% */
+
   letter-spacing: 0.03em;
   color: #757575;
 }
@@ -341,6 +383,8 @@ ul {
 }
 .footer {
   background: var(--background-color);
+  padding: 60px 215px;
+  margin-top: 94px;
 }
 .subject-list {
   color: var(--primery-text-color);
