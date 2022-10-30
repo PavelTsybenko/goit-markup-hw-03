@@ -29,6 +29,17 @@ p {
   margin: 0;
   padding: 0;
 }
+ul {
+  padding: 0;
+  margin: 0;
+}
+h3 {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+}
 
 .page-body {
   padding-top: 24px 0px 60px 0px;
@@ -41,11 +52,12 @@ p {
 }
 .container .site-nav {
   display: flex;
-  align-items: center;
 }
 .container {
   width: 1200px;
   margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
 
   color: rgba(236, 236, 236, 1);
 }
@@ -76,7 +88,7 @@ p {
   display: inline-block;
 }
 .title {
-  padding: 20px 24px;
+  margin: 20px 24px;
 }
 .list {
   list-style: none;
@@ -93,8 +105,10 @@ ul {
 /*header*/
 .nav {
   display: flex;
-  align-items: center;
+
   margin-right: 0px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 .logo {
   font-family: Raleway, sans-serif;
@@ -120,6 +134,10 @@ ul {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  margin-right: 50px;
+}
+.site-nav .link > li:nth-last-child(3) {
+  margin-right: 0px;
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -143,8 +161,9 @@ ul {
 .link-connection .link:focus {
   color: var(--accent-color);
 }
-.site-nav .link {
-  margin-right: 50px;
+.site-nav .list > ul {
+  margin: 0;
+  padding: 0;
 }
 
 .link-phone {
@@ -160,11 +179,13 @@ ul {
 /*section hero*/
 .hero {
   background: var(--background-color);
-  padding: 195px 0px;
+  padding: 200px 0px;
 }
 .hero-portfolio {
   background: var(--portfolio-bg-color);
   border-top: 1px solid rgba(236, 236, 236, 1);
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .hero-title {
   font-style: normal;
@@ -178,7 +199,9 @@ ul {
   text-transform: uppercase;
   color: var(--third-text-color);
 }
-
+.section {
+  padding: 94px 0;
+}
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -193,11 +216,13 @@ ul {
 }
 .block {
   background: #f5f4fa;
-  padding: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .benefits.list {
   display: flex;
-  margin: 0 0 94px 0;
+  padding-bottom: 94px;
+
   flex-grow: 1;
 }
 .benefits.list > li > img {
@@ -217,8 +242,6 @@ ul {
 }
 .text.list {
   display: flex;
-  padding: 97px 0px;
-  margin: 0 0 100px 0;
 }
 .desk {
   max-width: 270px;
@@ -265,7 +288,9 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
-  margin: 10px 0;
+}
+.name {
+  padding: 30px;
 }
 /*footer*/
 .address {
@@ -296,8 +321,9 @@ ul {
   line-height: 1.87;
   margin: 45px auto;
   border-radius: 4px;
+  border: 0;
 
-  padding: 10px 32px;
+  padding: 6px 25px;
   text-align: center;
   justify-content: center;
 
@@ -328,10 +354,11 @@ ul {
 .button-nav.list {
   display: flex;
   justify-content: center;
+  margin-bottom: 34px;
 }
 
 .button-nav.list > li {
-  margin: 94px 8px 50px 0;
+  margin: 0 8px 0 0;
 }
 .list {
   box-sizing: border-box;
@@ -359,6 +386,7 @@ ul {
 
 .content.list {
   display: flex;
+  flex-grow: 1;
   flex-wrap: wrap;
   gap: 30px;
   padding: 0;
@@ -379,15 +407,14 @@ ul {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
-  margin-top: 60px;
+  margin-bottom: 20px;
 
   letter-spacing: 0.03em;
   color: var(--third-text-color);
 }
 .footer {
   background: var(--background-color);
-  padding: 60px 215px;
-  margin-top: 94px;
+  padding: 60px;
 }
 .subject-list {
   color: var(--primery-text-color);
@@ -418,9 +445,12 @@ ul {
 .subject .link:focus {
   color: var(--accent-color);
 }
-
+.link {
+  margin-bottom: 9px;
+}
 .link.address {
   color: var(--third-text-color);
+  margin-bottom: 9px;
 }
 .pointer {
   cursor: pointer;
