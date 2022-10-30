@@ -355,6 +355,7 @@ ul {
   color: var(--secondary-text-color);
   letter-spacing: 0.03em;
 }
+
 .content.list {
   display: flex;
   flex-wrap: wrap;
